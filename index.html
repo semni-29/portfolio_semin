@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>현세민 포트폴리오</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <strong>현세민</strong>
+    <nav aria-label="섹션">
+      <a href="#about">About</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div>
+      <div class="who"><span class="chip on">데이터 사이언티스트</span><span class="chip">컴퓨터공학 학사·석사</span><span class="chip">의료 · 금융 · 유통 · 공공</span></div>
+      <h1 class="thesis">높은 지표보다<br><strong>도메인에 맞는 지표</strong>를<br>먼저 고민합니다.</h1>
+      <p class="lead">문제마다 무엇을 기준으로 성과를 도출할 지 고민하는 현세민입니다. 의료에서는 놓치는 환자가 없어야 하고, 마케팅에서는 한정된 예산 안에서 반응할 고객을 골라내야 합니다.</p>
+      <div class="hero-cta"><a class="btn primary" href="#projects">프로젝트 17건 보기</a></div>
+    </div>
+    <aside class="log" aria-labelledby="log-h">
+      <h2 id="log-h">측정 기록</h2>
+      <p class="sub">대표 프로젝트 7건의 핵심 결과입니다. 누르면 세부 내용이 열립니다.</p>
+      <ol id="log"></ol>
+    </aside>
+  </div>
+</section>
+
+<section class="pad" id="about">
+  <div class="wrap">
+    <div class="sec-head"><h2>About</h2><p>대중적이지 않은 여러 도메인을 모델링 연구와 부트캠프로 경험했습니다.</p></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>컴퓨터공학 학사·석사 과정 동안 <b>국가 R&amp;D 과제 3건과 산학 기술애로 해결과제</b>에 참여하며 의료 데이터를 다뤘습니다. 뇌질환 예측·예방(IITP ITRC), 메디컬 트윈 기반 시술 합병증 예측(KHIDI), 비대면 문진 시스템 개발 과제에서 <b>논문 5편</b>을 썼고, 그중 2편은 제1저자입니다.</p>
+        <p>다른 도메인도 경험하기 위해 디지털하나로 2기, 경기도 빅데이터 전문가 과정을 수료하며 <b>카드·통신·렌탈·리테일·플랫폼</b> 분야의 실제 데이터를 다뤘습니다. 하나카드 결제 데이터 30만 건으로 타깃 마케팅 모델을 만들었고, 통신사 고객 이탈 예측과 리테일 RFM 세그멘테이션도 진행했습니다.</p>
+        <p>모델 성능이 높게 나와도 그 지표가 해당 도메인에서 의미 있는 기준인지 먼저 따져보고, 고른 지표와 결과를 <b>데이터를 잘 모르는 사람도 이해할 수 있게</b> 설명하는 일을 좋아합니다.</p>
+      </div>
+      <div style="display:grid;gap:20px">
+        <div class="facts">
+          <div class="fact"><b>17</b><span>프로젝트</span></div>
+          <div class="fact"><b>5</b><span>논문 (제1저자 2)</span></div>
+          <div class="fact"><b>5</b><span>국가 R&amp;D · 산학 과제</span></div>
+        </div>
+        <dl class="stack" id="stack"></dl>
+      </div>
+    </div>
+
+    <h3 class="sub-h">일하는 방식</h3>
+    <div class="principles">
+      <div class="pr"><span class="num">1</span><h4>지표 최고값이 아닌 일반화 성능으로 모델 선정</h4>
+        <ul><li><b>통신사 이탈 예측</b> F1 최고 XGBoost(0.90)의 학습·검증 격차로 과적합 판정, AdaBoost(0.87) 채택</li><li><b>카드 여행 예측</b> Recall 1위 Logistic Regression(0.88)이 Accuracy 0.57로 실무 최소선 미달, GBM 채택</li><li><b>TAVR</b> 성능은 올랐지만 임상 검증이 불가능한 CTGAN 증강 데이터 제외</li></ul></div>
+      <div class="pr"><span class="num">2</span><h4>데이터 제약이 있으면 합성 데이터를 설계해 검증</h4>
+        <ul><li><b>성범죄자 관리 구역</b> 신상정보의 법적 활용 불가 확인 후 비식별 합성 데이터 직접 설계</li><li><b>합성 원칙</b> 공개 항목 형식만 모사, 실데이터 간 연결 차단, 인원수는 실제 통계 반영</li><li><b>센서</b> 오픈데이터 학습 → 실측 데이터 최종 검증의 2단계 구성</li></ul></div>
+      <div class="pr"><span class="num">3</span><h4>분석 결과를 서비스 화면까지 구현</h4>
+        <ul><li><b>TAVR</b> 전역 설명과 환자별 설명을 나눈 Web Navigator</li><li><b>에너지</b> Web·카카오톡 정보 구조 차등 설계로 3턴 이내 핵심 정보 도달</li><li><b>GIS · 실종아동</b> 인터랙티브 지도, React·Node.js 웹 서비스</li></ul></div>
+    </div>
+
+    <h3 class="sub-h">핵심 역량</h3>
+    <div class="caps">
+      <div class="cap"><b>데이터 제약 환경에서의 모델링</b><span>불균형(80명 중 양성 5명)·소량·법적 활용 제한 데이터에서 검증 설계 선행</span></div>
+      <div class="cap"><b>근거 기반 모델 선정</b><span>실무 최소 기준 충족 후 목적 지표로 선정, 학습·검증 격차 기반 과적합 판별</span></div>
+      <div class="cap"><b>설명가능 AI(XAI)</b><span>변수중요도·SHAP·LIME 비교, 전역 설명과 환자별 설명을 분리한 대시보드</span></div>
+      <div class="cap"><b>이종 데이터 통합</b><span>주기·잡음이 다른 센서 스트림 정합, 카드·크롤링·공공 API 데이터 결합</span></div>
+      <div class="cap"><b>CRM · 마케팅 분석</b><span>RFM, K-means 군집화, LTV 재산정, 이탈·구매 예정 예측, 연관분석</span></div>
+      <div class="cap"><b>인프라 · 서비스 구현</b><span>Kubernetes 모델 서빙(HPA·GPU·CI/CD·모니터링), Web·챗봇·GIS·대시보드</span></div>
+    </div>
+    <h3 class="sub-h">연구 실적</h3>
+    <div class="papers" id="papers"></div>
+  </div>
+</section>
+
+<section class="pad tl-band" id="timeline">
+  <div class="wrap">
+    <div class="sec-head"><h2>Timeline</h2><p>학부 과제부터 대학원 연구, 부트캠프, 공모전까지 시간 순서로 정리했습니다. 프로젝트 이름을 누르면 세부 내용이 열립니다.</p></div>
+    <ol class="tl" id="tl"></ol>
+  </div>
+</section>
+
+<section class="pad" id="projects">
+  <div class="wrap">
+    <div class="sec-head"><h2>Projects</h2><p>카드를 누르면 채택한 기준과 기각한 대안, 문제 정의부터 검증·한계까지의 세부 내용이 열립니다.</p></div>
+    <div class="filters" role="group" aria-label="분야별 보기" id="filters"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Contact</h2>
+      <p>프로젝트의 데이터, 코드, 판단 과정에 대해 더 궁금한 점이 있으면 편하게 연락 주세요.</p>
+    </div>
+    <div class="cl">
+      <div><span class="k">이메일</span><span class="val" id="mail">tpalsgus0@gmail.com</span><button type="button" id="copy">주소 복사</button></div>
+      <div><span class="k">GitHub</span><span class="val"><a href="https://github.com/SeminHyun" target="_blank" rel="noopener">github.com/SeminHyun</a></span><a class="go" href="https://github.com/SeminHyun" target="_blank" rel="noopener">방문</a></div>
+    </div>
+  </div>
+  <div class="wrap foot">현세민 · 데이터 사이언티스트 포트폴리오</div>
+</section>
+</main>
+
+<dialog id="modal" aria-labelledby="m-title">
+  <div class="m-head">
+    <div><div class="top" id="m-top"></div><h2 id="m-title"></h2><p class="ctx" id="m-ctx"></p></div>
+    <button class="m-x" type="button" id="m-close" aria-label="닫기">×</button>
+  </div>
+  <div class="m-body" id="m-body"></div>
+  <div class="m-foot"><button type="button" id="m-prev"></button><button type="button" id="m-next"></button></div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
